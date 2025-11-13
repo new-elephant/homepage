@@ -1,0 +1,38 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "products": "Products",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Welcome to New Elephant",
+    "subtitle": "Your Trusted Partner in Medical Equipment Solutions"
+  },
+  "about": {
+    "title": "About Us",
+    "description": "New Elephant is a leading distributor of medical equipment and devices, dedicated to bringing world-class healthcare solutions to medical institutions and professionals. With years of expertise in the medical device industry and strong partnerships with renowned international manufacturers, we provide comprehensive support from product selection to after-sales service, ensuring the highest quality care for patients."
+  },
+  "products": {
+    "title": "Products & Solutions",
+    "product1": {
+      "title": "Diagnostic Imaging Equipment",
+      "description": "Advanced diagnostic imaging systems including ultrasound, X-ray, and CT scanners from leading global manufacturers, providing accurate and reliable diagnostic capabilities."
+    },
+    "product2": {
+      "title": "Surgical & Patient Monitoring Systems",
+      "description": "Comprehensive range of surgical instruments and patient monitoring equipment designed to enhance surgical precision and patient safety in operating rooms and critical care units."
+    },
+    "product3": {
+      "title": "Laboratory & Clinical Equipment",
+      "description": "State-of-the-art laboratory analyzers, clinical testing equipment, and diagnostic instruments for accurate and efficient medical testing and analysis."
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "description": "Contact us to learn more about our medical equipment solutions and how we can support your healthcare facility.",
+    "email": "Email",
+    "address": "Address",
+    "addressValue": "Taipei, Taiwan"
+  }
+}
