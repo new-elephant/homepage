@@ -1,11 +1,331 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<Welcome />
+	<!-- Hero Section -->
+	<section id="hero">
+		<div class="container">
+			<h1>Welcome to Our Company</h1>
+			<p class="subtitle">Innovating for a Better Tomorrow</p>
+		</div>
+	</section>
+
+	<!-- About Section -->
+	<section id="about">
+		<div class="container">
+			<h2>關於我們 / About Us</h2>
+			<p>
+				We are dedicated to providing innovative solutions that transform businesses
+				and improve lives. With years of experience and a passion for excellence,
+				we strive to deliver the best products and services to our customers.
+			</p>
+		</div>
+	</section>
+
+	<!-- Products & Solutions Section -->
+	<section id="products">
+		<div class="container">
+			<h2>產品與解決方案 / Products & Solutions</h2>
+			<div class="products-grid">
+				<div class="product-card">
+					<h3>Product 1</h3>
+					<p>Innovative solutions tailored to your needs.</p>
+				</div>
+				<div class="product-card">
+					<h3>Product 2</h3>
+					<p>Cutting-edge technology for modern challenges.</p>
+				</div>
+				<div class="product-card">
+					<h3>Product 3</h3>
+					<p>Reliable and scalable solutions for growth.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Contact Section -->
+	<section id="contact">
+		<div class="container">
+			<h2>聯絡我們 / Contact Us</h2>
+			<p>Get in touch with us to learn more about our products and services.</p>
+			<div class="contact-info">
+				<p><strong>Email:</strong> info@example.com</p>
+				<p><strong>Address:</strong> Taipei, Taiwan</p>
+			</div>
+		</div>
+	</section>
 </Layout>
+
+<style>
+	section {
+		padding: 5rem 2rem;
+		position: relative;
+	}
+
+	.container {
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+	/* Hero Section */
+	#hero {
+		background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #d946ef 100%);
+		color: white;
+		text-align: center;
+		min-height: 100vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+		overflow: hidden;
+	}
+
+	#hero::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background:
+			radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+			radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+		animation: pulse 15s ease-in-out infinite;
+	}
+
+	@keyframes pulse {
+		0%, 100% { opacity: 1; }
+		50% { opacity: 0.5; }
+	}
+
+	#hero .container {
+		position: relative;
+		z-index: 1;
+		animation: fadeInUp 1s ease-out;
+	}
+
+	@keyframes fadeInUp {
+		from {
+			opacity: 0;
+			transform: translateY(30px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	#hero h1 {
+		font-size: 4rem;
+		font-weight: 800;
+		margin-bottom: 1.5rem;
+		letter-spacing: -0.02em;
+		line-height: 1.2;
+	}
+
+	#hero .subtitle {
+		font-size: 1.75rem;
+		font-weight: 400;
+		opacity: 0.95;
+		letter-spacing: 0.01em;
+	}
+
+	/* About Section */
+	#about {
+		background: linear-gradient(to bottom, #ffffff 0%, #f9fafb 100%);
+	}
+
+	#about h2 {
+		font-size: 3rem;
+		font-weight: 700;
+		margin-bottom: 2rem;
+		text-align: center;
+		color: #1f2937;
+		letter-spacing: -0.02em;
+	}
+
+	#about p {
+		font-size: 1.25rem;
+		line-height: 2;
+		color: #4b5563;
+		max-width: 900px;
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	/* Products Section */
+	#products {
+		background-color: #f9fafb;
+		padding: 6rem 2rem;
+	}
+
+	#products h2 {
+		font-size: 3rem;
+		font-weight: 700;
+		margin-bottom: 3rem;
+		text-align: center;
+		color: #1f2937;
+		letter-spacing: -0.02em;
+	}
+
+	.products-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+		gap: 2.5rem;
+		margin-top: 3rem;
+	}
+
+	.product-card {
+		background: white;
+		padding: 2.5rem;
+		border-radius: 16px;
+		box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+		transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+		border: 1px solid #e5e7eb;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.product-card::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 4px;
+		background: linear-gradient(90deg, #6366f1, #8b5cf6, #d946ef);
+		transform: scaleX(0);
+		transition: transform 0.3s ease;
+	}
+
+	.product-card:hover::before {
+		transform: scaleX(1);
+	}
+
+	.product-card:hover {
+		transform: translateY(-8px);
+		box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+		border-color: #d1d5db;
+	}
+
+	.product-card h3 {
+		font-size: 1.75rem;
+		font-weight: 600;
+		margin-bottom: 1rem;
+		color: #1f2937;
+		background: linear-gradient(135deg, #6366f1, #8b5cf6);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+	}
+
+	.product-card p {
+		color: #6b7280;
+		line-height: 1.8;
+		font-size: 1.0625rem;
+	}
+
+	/* Contact Section */
+	#contact {
+		background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+		color: white;
+		text-align: center;
+		padding: 6rem 2rem;
+	}
+
+	#contact h2 {
+		font-size: 3rem;
+		font-weight: 700;
+		margin-bottom: 1.5rem;
+		color: white;
+		letter-spacing: -0.02em;
+	}
+
+	#contact > .container > p {
+		font-size: 1.25rem;
+		color: #d1d5db;
+		margin-bottom: 3rem;
+	}
+
+	.contact-info {
+		display: inline-block;
+		text-align: left;
+		background: rgba(255, 255, 255, 0.05);
+		backdrop-filter: blur(10px);
+		padding: 2.5rem 3.5rem;
+		border-radius: 16px;
+		border: 1px solid rgba(255, 255, 255, 0.1);
+		box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+	}
+
+	.contact-info p {
+		font-size: 1.0625rem;
+		margin-bottom: 1rem;
+		color: #e5e7eb;
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+	}
+
+	.contact-info p:last-child {
+		margin-bottom: 0;
+	}
+
+	.contact-info strong {
+		color: white;
+		font-weight: 600;
+		min-width: 80px;
+	}
+
+	/* Responsive Design */
+	@media (max-width: 768px) {
+		#hero h1 {
+			font-size: 2.5rem;
+		}
+
+		#hero .subtitle {
+			font-size: 1.25rem;
+		}
+
+		section {
+			padding: 4rem 1.5rem;
+		}
+
+		#products,
+		#contact {
+			padding: 4rem 1.5rem;
+		}
+
+		#about h2,
+		#products h2,
+		#contact h2 {
+			font-size: 2rem;
+		}
+
+		.products-grid {
+			grid-template-columns: 1fr;
+			gap: 1.5rem;
+		}
+
+		.contact-info {
+			padding: 2rem;
+		}
+
+		.contact-info p {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 0.25rem;
+		}
+	}
+
+	@media (max-width: 480px) {
+		#hero h1 {
+			font-size: 2rem;
+		}
+
+		#hero .subtitle {
+			font-size: 1.125rem;
+		}
+	}
+</style>
