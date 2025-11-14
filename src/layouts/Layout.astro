@@ -10,19 +10,76 @@ const titles = {
 	'en': 'New Elephant - Medical Equipment Solutions',
 	'zh-tw': '新鐌 - 醫療設備解決方案'
 };
+const descriptions = {
+	'en': 'New Elephant provides innovative medical equipment solutions and healthcare technology. Trusted partner for hospitals and medical facilities worldwide.',
+	'zh-tw': '新鐌提供創新的醫療設備解決方案與醫療科技。全球醫院和醫療機構值得信賴的合作夥伴。'
+};
+const keywords = {
+	'en': 'medical equipment, healthcare solutions, medical technology, hospital equipment, medical devices, healthcare innovation',
+	'zh-tw': '醫療設備, 醫療解決方案, 醫療科技, 醫院設備, 醫療器材, 醫療創新'
+};
+const siteUrl = 'https://new-elephant.com';
 ---
 
 <!doctype html>
 <html lang={lang}>
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content={descriptions[lang]} />
+		<meta name="keywords" content={keywords[lang]} />
+		<meta name="author" content="New Elephant" />
+		<meta name="robots" content="index, follow" />
+
+		<!-- Canonical URL -->
+		<link rel="canonical" href={`${siteUrl}/${lang}/`} />
+
+		<!-- Language Alternates -->
+		<link rel="alternate" hreflang="en" href={`${siteUrl}/en/`} />
+		<link rel="alternate" hreflang="zh-TW" href={`${siteUrl}/zh-tw/`} />
+		<link rel="alternate" hreflang="x-default" href={`${siteUrl}/zh-tw/`} />
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={`${siteUrl}/${lang}/`} />
+		<meta property="og:title" content={titles[lang]} />
+		<meta property="og:description" content={descriptions[lang]} />
+		<meta property="og:image" content={`${siteUrl}/og-image.png`} />
+		<meta property="og:locale" content={lang === 'zh-tw' ? 'zh_TW' : 'en_US'} />
+		<meta property="og:site_name" content="New Elephant" />
+
+		<!-- Twitter -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:url" content={`${siteUrl}/${lang}/`} />
+		<meta name="twitter:title" content={titles[lang]} />
+		<meta name="twitter:description" content={descriptions[lang]} />
+		<meta name="twitter:image" content={`${siteUrl}/twitter-image.png`} />
+
+		<!-- Theme Color -->
+		<meta name="theme-color" content="#687a86" />
+
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 		<title>{titles[lang]}</title>
+
+		<!-- JSON-LD Structured Data -->
+		<script type="application/ld+json" set:html={JSON.stringify({
+			"@context": "https://schema.org",
+			"@type": "Organization",
+			"name": "New Elephant",
+			"url": siteUrl,
+			"logo": `${siteUrl}/favicon.svg`,
+			"description": descriptions[lang],
+			"contactPoint": {
+				"@type": "ContactPoint",
+				"contactType": "customer service",
+				"email": "info@example.com"
+			},
+			"sameAs": []
+		})} />
 	</head>
 	<body>
 		<slot />
@@ -51,12 +108,154 @@ const titles = {
 	}
 
 	:root {
-		--color-primary: #687a86;
-		--color-secondary: #8d9ca4;
-		--color-light-beige: #e5dfd8;
-		--color-sage: #d4d7c4;
-		--color-accent-warm: #d4766a;
-		--color-accent-teal: #2a9d8f;
+		/* Primary Colors - Blue Gray */
+		--color-primary-900: #3d4a52;
+		--color-primary-800: #4f5f6a;
+		--color-primary-700: #687a86;
+		--color-primary-600: #7b8c96;
+		--color-primary-500: #8d9ca4;
+		--color-primary-400: #a3b0b7;
+		--color-primary-300: #b9c3c9;
+		--color-primary-200: #cfd7db;
+		--color-primary-100: #e5eaed;
+		--color-primary-50: #f2f5f6;
+
+		/* Neutral Colors - Beige & Sage */
+		--color-neutral-900: #9b8f82;
+		--color-neutral-800: #b5aca0;
+		--color-neutral-700: #cfc8bd;
+		--color-neutral-600: #d9d3ca;
+		--color-neutral-500: #e5dfd8;
+		--color-neutral-400: #ebe6e1;
+		--color-neutral-300: #f0ede9;
+		--color-neutral-200: #f6f4f2;
+		--color-neutral-100: #fafaf9;
+		--color-neutral-50: #fcfcfc;
+
+		/* Sage Colors */
+		--color-sage-900: #8a8e76;
+		--color-sage-800: #a2a68e;
+		--color-sage-700: #babfa6;
+		--color-sage-600: #c7cbb5;
+		--color-sage-500: #d4d7c4;
+		--color-sage-400: #dddfd0;
+		--color-sage-300: #e5e7db;
+		--color-sage-200: #edefe6;
+		--color-sage-100: #f6f7f2;
+		--color-sage-50: #fafbf9;
+
+		/* Accent Warm - Terracotta */
+		--color-accent-warm-900: #a04e44;
+		--color-accent-warm-800: #ba5e53;
+		--color-accent-warm-700: #d4766a;
+		--color-accent-warm-600: #db8e84;
+		--color-accent-warm-500: #e2a69e;
+		--color-accent-warm-400: #e9beb8;
+		--color-accent-warm-300: #f0d6d2;
+		--color-accent-warm-200: #f7eeec;
+		--color-accent-warm-100: #faf5f4;
+		--color-accent-warm-50: #fdfcfc;
+
+		/* Accent Teal */
+		--color-accent-teal-900: #1a645a;
+		--color-accent-teal-800: #227b6f;
+		--color-accent-teal-700: #2a9d8f;
+		--color-accent-teal-600: #4eaea2;
+		--color-accent-teal-500: #72bfb5;
+		--color-accent-teal-400: #96cfc8;
+		--color-accent-teal-300: #bae0db;
+		--color-accent-teal-200: #ddf0ed;
+		--color-accent-teal-100: #eef7f6;
+		--color-accent-teal-50: #f7fcfb;
+
+		/* Semantic Colors */
+		--color-primary: var(--color-primary-700);
+		--color-primary-dark: var(--color-primary-900);
+		--color-primary-light: var(--color-primary-100);
+
+		--color-secondary: var(--color-primary-500);
+		--color-secondary-dark: var(--color-primary-700);
+		--color-secondary-light: var(--color-primary-200);
+
+		--color-background: var(--color-neutral-500);
+		--color-background-alt: var(--color-sage-500);
+		--color-background-light: var(--color-neutral-100);
+		--color-background-dark: var(--color-sage-700);
+
+		--color-surface: var(--color-neutral-500);
+		--color-surface-raised: var(--color-neutral-300);
+		--color-surface-overlay: var(--color-neutral-200);
+
+		--color-text-primary: var(--color-primary-700);
+		--color-text-secondary: var(--color-primary-500);
+		--color-text-muted: var(--color-primary-400);
+		--color-text-on-primary: var(--color-neutral-500);
+		--color-text-on-dark: var(--color-neutral-500);
+
+		--color-border: var(--color-primary-400);
+		--color-border-light: var(--color-primary-200);
+		--color-border-dark: var(--color-primary-600);
+
+		--color-accent-1: var(--color-accent-teal-700);
+		--color-accent-1-hover: var(--color-accent-teal-800);
+		--color-accent-1-light: var(--color-accent-teal-100);
+
+		--color-accent-2: var(--color-accent-warm-700);
+		--color-accent-2-hover: var(--color-accent-warm-800);
+		--color-accent-2-light: var(--color-accent-warm-100);
+
+		/* Legacy support */
+		--color-light-beige: var(--color-neutral-500);
+		--color-sage: var(--color-sage-500);
+		--color-accent-warm: var(--color-accent-warm-700);
+		--color-accent-teal: var(--color-accent-teal-700);
+
+		/* Shadows */
+		--shadow-sm: 0 1px 2px 0 rgba(104, 122, 134, 0.05);
+		--shadow-md: 0 4px 6px -1px rgba(104, 122, 134, 0.1), 0 2px 4px -1px rgba(104, 122, 134, 0.06);
+		--shadow-lg: 0 10px 15px -3px rgba(104, 122, 134, 0.1), 0 4px 6px -2px rgba(104, 122, 134, 0.05);
+		--shadow-xl: 0 20px 25px -5px rgba(104, 122, 134, 0.1), 0 10px 10px -5px rgba(104, 122, 134, 0.04);
+		--shadow-2xl: 0 25px 50px -12px rgba(104, 122, 134, 0.25);
+
+		/* Spacing Scale */
+		--space-xs: 0.25rem;
+		--space-sm: 0.5rem;
+		--space-md: 1rem;
+		--space-lg: 1.5rem;
+		--space-xl: 2rem;
+		--space-2xl: 3rem;
+		--space-3xl: 4rem;
+		--space-4xl: 6rem;
+
+		/* Border Radius */
+		--radius-sm: 4px;
+		--radius-md: 8px;
+		--radius-lg: 16px;
+		--radius-xl: 24px;
+		--radius-full: 9999px;
+
+		/* Typography */
+		--font-size-xs: 0.75rem;
+		--font-size-sm: 0.875rem;
+		--font-size-base: 1rem;
+		--font-size-lg: 1.125rem;
+		--font-size-xl: 1.25rem;
+		--font-size-2xl: 1.5rem;
+		--font-size-3xl: 1.875rem;
+		--font-size-4xl: 2.25rem;
+		--font-size-5xl: 3rem;
+		--font-size-6xl: 4rem;
+
+		--font-weight-normal: 400;
+		--font-weight-medium: 500;
+		--font-weight-semibold: 600;
+		--font-weight-bold: 700;
+		--font-weight-extrabold: 800;
+
+		--line-height-tight: 1.2;
+		--line-height-normal: 1.6;
+		--line-height-relaxed: 1.8;
+		--line-height-loose: 2;
 	}
 
 	body {
