@@ -16,15 +16,15 @@
   "products": {
     "title": "Products & Solutions",
     "product1": {
-      "title": "Diagnostic Imaging Equipment",
+      "title": "MediScan Pro Series",
       "description": "Advanced diagnostic imaging systems including ultrasound, X-ray, and CT scanners from leading global manufacturers, providing accurate and reliable diagnostic capabilities."
     },
     "product2": {
-      "title": "Surgical & Patient Monitoring Systems",
+      "title": "SurgiCare Elite System",
       "description": "Comprehensive range of surgical instruments and patient monitoring equipment designed to enhance surgical precision and patient safety in operating rooms and critical care units."
     },
     "product3": {
-      "title": "Laboratory & Clinical Equipment",
+      "title": "LabTech Analyzer Suite",
       "description": "State-of-the-art laboratory analyzers, clinical testing equipment, and diagnostic instruments for accurate and efficient medical testing and analysis."
     }
   },

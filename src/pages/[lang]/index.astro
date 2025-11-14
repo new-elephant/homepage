@@ -3,6 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import LanguageSwitcher from '../../components/LanguageSwitcher.astro';
 import '../../styles/index.css';
 import { languages, useTranslations, type Language } from '../../i18n/utils';
+import logo from '../../assets/new-elephant.svg';
 
 export function getStaticPaths() {
   return Object.keys(languages).map((lang) => ({
@@ -19,6 +20,7 @@ const t = useTranslations(lang as Language);
 	<!-- Hero Section -->
 	<section id="hero">
 		<div class="container">
+			<img src={logo.src} alt="New Elephant Logo" class="hero-logo" />
 			<h1>{t('hero.title')}</h1>
 			<p class="subtitle">{t('hero.subtitle')}</p>
 		</div>

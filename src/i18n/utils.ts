@@ -6,7 +6,7 @@ export const languages = {
   'zh-tw': '繁體中文',
 };
 
-export const defaultLang = 'en';
+export const defaultLang = 'zh-tw';
 
 export const translations = {
   en: en,
