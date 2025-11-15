@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Elephant - Color System Preview</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f5f5f5;
+      padding: 2rem;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      background: white;
+      padding: 3rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      color: #1a1a1a;
+    }
+
+    .subtitle {
+      color: #666;
+      font-size: 1.125rem;
+      margin-bottom: 3rem;
+    }
+
+    h2 {
+      font-size: 1.75rem;
+      margin: 3rem 0 1.5rem;
+      color: #2a2a2a;
+      border-bottom: 3px solid #2a9d8f;
+      padding-bottom: 0.5rem;
+    }
+
+    .color-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .color-card {
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .color-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .color-swatch {
+      height: 120px;
+      width: 100%;
+    }
+
+    .color-info {
+      padding: 1rem;
+      background: white;
+    }
+
+    .color-name {
+      font-weight: 600;
+      font-size: 0.875rem;
+      color: #333;
+      margin-bottom: 0.25rem;
+    }
+
+    .color-hex {
+      font-family: 'Monaco', 'Courier New', monospace;
+      font-size: 0.75rem;
+      color: #666;
+      background: #f5f5f5;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      display: inline-block;
+    }
+
+    .color-usage {
+      font-size: 0.75rem;
+      color: #999;
+      margin-top: 0.5rem;
+      font-style: italic;
+    }
+
+    .section-intro {
+      background: #f9f9f9;
+      padding: 1rem 1.5rem;
+      border-radius: 6px;
+      margin-bottom: 2rem;
+      border-left: 4px solid #2a9d8f;
+    }
+
+    .accent-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .accent-card {
+      border-radius: 12px;
+      padding: 2rem;
+      color: white;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .accent-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .accent-card p {
+      opacity: 0.9;
+      line-height: 1.8;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>New Elephant Design System</h1>
+    <p class="subtitle">Color Palette Preview</p>
+
+    <!-- Primary Colors -->
+    <h2>Primary Colors (Blue-Gray)</h2>
+    <div class="section-intro">
+      <strong>Professional, trustworthy, medical-grade aesthetic.</strong>
+      <p>Main brand colors for text, headings, and primary UI elements.</p>
+    </div>
+    <div class="color-grid">
+      <div class="color-card">
+        <div class="color-swatch" style="background: #3d4a52;"></div>
+        <div class="color-info">
+          <div class="color-name">primary-900</div>
+          <div class="color-hex">#3d4a52</div>
+          <div class="color-usage">Dark headings, emphasis</div>
+        </div>
+      </div>
+      <div class="color-card">
+        <div class="color-swatch" style="background: #4f5f6a;"></div>
+        <div class="color-info">
+          <div class="color-name">primary-800</div>
+          <div class="color-hex">#4f5f6a</div>
+          <div class="color-usage">Dark text</div>
+        </div>
+      </div>
+      <div class="color-card">
+        <div class="color-swatch" style="background: #687a86;"></div>
+        <div class="color-info">
+          <div class="color-name">primary-700 ⭐</div>
+          <div class="color-hex">#687a86</div>
+          <div class="color-usage">Main brand color, body text</div>
+        </div>
+      </div>
+      <div class="color-card">
+        <div class="color-swatch" style="background: #7b8c96;"></div>
+        <div class="color-info">
+          <div class="color-name">primary-600</div>
+          <div class="color-hex">#7b8c96</div>
+          <div class="color-usage">Secondary text</div>
+        </div>
+      </div>
+      <div class="color-card">
+        <div class="color-swatch" style="background: #8d9ca4;"></div>
+        <div class="color-info">
+          <div class="color-name">primary-500 ⭐</div>
+          <div class="color-hex">#8d9ca4</div>
+          <div class="color-usage">Secondary brand color</div>
+        </div>
+      </div>
+      <div class="color-card">
+        <div class="color-swatch" style="background: #a3b0b7;"></div>
+        <div class="color-info">
+          <div class="color-name">primary-400</div>
+          <div class="color-hex">#a3b0b7</div>
+          <div class="color-usage">Borders, muted text</div>
+        </div>
+      </div>
+      <div class="color-card">
+        <div class="color-swatch" style="background: #b9c3c9;"></div>
+        <div class="color-info">
+          <div class="color-name">primary-300</div>
+          <div class="color-hex">#b9c3c9</div>
+          <div class="color-usage">Light borders</div>
+        </div>
+      </div>
+      <div class="color-card">
+        <div class="color-swatch" style="background: #cfd7db;"></div>
+        <div class="color-info">
+          <div class="color-name">primary-200</div>
+          <div class="color-hex">#cfd7db</div>
+          <div class="color-usage">Subtle backgrounds</div>
+        </div>
+      </div>
+      <div class="color-card">
+        <div class="color-swatch" style="background: #e5eaed;"></div>
+        <div class="color-info">
+          <div class="color-name">primary-100</div>
+          <div class="color-hex">#e5eaed</div>
+          <div class="color-usage">Very light backgrounds</div>
+        </div>
+      </div>
+      <div class="color-card">
+        <div class="color-swatch" style="background: #f2f5f6;"></div>
+        <div class="color-info">
+          <div class="color-name">primary-50</div>
+          <div class="color-hex">#f2f5f6</div>
+          <div class="color-usage">Hover states, cards</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Neutral Colors -->
+    <h2>Neutral Colors (Beige)</h2>
+    <div class="section-intro">
+      <strong>Warm, approachable, comfortable backgrounds.</strong>
+      <p>Main background and surface colors for the website.</p>
+    </div>
+    <div class="color-grid">
+      <div class="color-card">
+        <div class="color-swatch" style="background: #9b8f82;"></div>
+        <div class="color-info">
+          <div class="color-name">neutral-900</div>
+          <div class="color-hex">#9b8f82</div>
+          <div class="color-usage">Dark warm text</div>
+        </div>
+      </div>
+      <div class="color-card">
+        <div class="color-swatch" style="background: #b5aca0;"></div>
+        <div class="color-info">
+          <div class="color-name">neutral-800</div>
+          <div class="color-hex">#b5aca0</div>
+          <div class="color-usage">Warm text</div>
+        </div>
+      </div>
+      <div class="color-card">
+        <div class="color-swatch" style="background: #cfc8bd;"></div>
+        <div class="color-info">
+          <div class="color-name">neutral-700</div>
+          <div class="color-hex">#cfc8bd</div>
+          <div class="color-usage">Muted warm text</div>
+        </div>
+      </div>
+      <div class="color-card">
+        <div class="color-swatch" style="background: #d9d3ca;"></div>
+        <div class="color-info">
+          <div class="color-name">neutral-600</div>
+          <div class="color-hex">#d9d3ca</div>
+          <div class="color-usage">Light warm text</div>
+        </div>
+      </div>
+      <div class="color-card">
+        <div class="color-swatch" style="background: #e5dfd8;"></div>
+        <div class="color-info">
+          <div class="color-name">neutral-500 ⭐</div>
+          <div class="color-hex">#e5dfd8</div>
+          <div class="color-usage">Main background</div>
+        </div>
+      </div>
+      <div class="color-card">
+        <div class="color-swatch" style="background: #ebe6e1;"></div>
+        <div class="color-info">
+          <div class="color-name">neutral-400</div>
+          <div class="color-hex">#ebe6e1</div>
+          <div class="color-usage">Lighter background</div>
+        </div>
+      </div>
+      <div class="color-card">
+        <div class="color-swatch" style="background: #f0ede9;"></div>
+        <div class="color-info">
+          <div class="color-name">neutral-300</div>
+          <div class="color-hex">#f0ede9</div>
+          <div class="color-usage">Raised surfaces</div>
+        </div>
+      </div>
+      <div class="color-card">
+        <div class="color-swatch" style="background: #f6f4f2;"></div>
+        <div class="color-info">
+          <div class="color-name">neutral-200</div>
+          <div class="color-hex">#f6f4f2</div>
+          <div class="color-usage">Overlay backgrounds</div>
+        </div>
+      </div>
+      <div class="color-card">
+        <div class="color-swatch" style="background: #fafaf9;"></div>
+        <div class="color-info">
+          <div class="color-name">neutral-100</div>
+          <div class="color-hex">#fafaf9</div>
+          <div class="color-usage">Very light backgrounds</div>
+        </div>
+      </div>
+      <div class="color-card">
+        <div class="color-swatch" style="background: #fcfcfc;"></div>
+        <div class="color-info">
+          <div class="color-name">neutral-50</div>
+          <div class="color-hex">#fcfcfc</div>
+          <div class="color-usage">Almost white</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sage Colors -->
+    <h2>Sage Colors</h2>
+    <div class="section-intro">
+      <strong>Natural, calming, healthcare-associated tones.</strong>
+      <p>Alternative backgrounds with a natural, organic feel.</p>
+    </div>
+    <div class="color-grid">
+      <div class="color-card">
+        <div class="color-swatch" style="background: #8a8e76;"></div>
+        <div class="color-info">
+          <div class="color-name">sage-900</div>
+          <div class="color-hex">#8a8e76</div>
+          <div class="color-usage">Dark sage text</div>
+        </div>
+      </div>
+      <div class="color-card">
+        <div class="color-swatch" style="background: #a2a68e;"></div>
+        <div class="color-info">
+          <div class="color-name">sage-800</div>
+          <div class="color-hex">#a2a68e</div>
+          <div class="color-usage">Medium sage text</div>
+        </div>
+      </div>
+      <div class="color-card">
+        <div class="color-swatch" style="background: #babfa6;"></div>
+        <div class="color-info">
+          <div class="color-name">sage-700</div>
+          <div class="color-hex">#babfa6</div>
+          <div class="color-usage">Sage text</div>
+        </div>
+      </div>
+      <div class="color-card">
+        <div class="color-swatch" style="background: #c7cbb5;"></div>
+        <div class="color-info">
+          <div class="color-name">sage-600</div>
+          <div class="color-hex">#c7cbb5</div>
+          <div class="color-usage">Light sage text</div>
+        </div>
+      </div>
+      <div class="color-card">
+        <div class="color-swatch" style="background: #d4d7c4;"></div>
+        <div class="color-info">
+          <div class="color-name">sage-500 ⭐</div>
+          <div class="color-hex">#d4d7c4</div>
+          <div class="color-usage">Main sage, alt backgrounds</div>
+        </div>
+      </div>
+      <div class="color-card">
+        <div class="color-swatch" style="background: #dddfd0;"></div>
+        <div class="color-info">
+          <div class="color-name">sage-400</div>
+          <div class="color-hex">#dddfd0</div>
+          <div class="color-usage">Light sage background</div>
+        </div>
+      </div>
+      <div class="color-card">
+        <div class="color-swatch" style="background: #e5e7db;"></div>
+        <div class="color-info">
+          <div class="color-name">sage-300</div>
+          <div class="color-hex">#e5e7db</div>
+          <div class="color-usage">Very light sage</div>
+        </div>
+      </div>
+      <div class="color-card">
+        <div class="color-swatch" style="background: #edefe6;"></div>
+        <div class="color-info">
+          <div class="color-name">sage-200</div>
+          <div class="color-hex">#edefe6</div>
+          <div class="color-usage">Subtle sage overlay</div>
+        </div>
+      </div>
+      <div class="color-card">
+        <div class="color-swatch" style="background: #f6f7f2;"></div>
+        <div class="color-info">
+          <div class="color-name">sage-100</div>
+          <div class="color-hex">#f6f7f2</div>
+          <div class="color-usage">Minimal sage tint</div>
+        </div>
+      </div>
+      <div class="color-card">
+        <div class="color-swatch" style="background: #fafbf9;"></div>
+        <div class="color-info">
+          <div class="color-name">sage-50</div>
+          <div class="color-hex">#fafbf9</div>
+          <div class="color-usage">Almost white with sage</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Accent Warm -->
+    <h2>Accent Warm (Terracotta)</h2>
+    <div class="section-intro">
+      <strong>Energy, warmth, call-to-action.</strong>
+      <p>High-contrast accent for buttons, highlights, and interactive elements.</p>
+    </div>
+    <div class="color-grid">
+      <div class="color-card">
+        <div class="color-swatch" style="background: #a04e44;"></div>
+        <div class="color-info">
+          <div class="color-name">warm-900</div>
+          <div class="color-hex">#a04e44</div>
+          <div class="color-usage">Dark terracotta</div>
+        </div>
+      </div>
+      <div class="color-card">
+        <div class="color-swatch" style="background: #ba5e53;"></div>
+        <div class="color-info">
+          <div class="color-name">warm-800</div>
+          <div class="color-hex">#ba5e53</div>
+          <div class="color-usage">Hover state</div>
+        </div>
+      </div>
+      <div class="color-card">
+        <div class="color-swatch" style="background: #d4766a;"></div>
+        <div class="color-info">
+          <div class="color-name">warm-700 ⭐</div>
+          <div class="color-hex">#d4766a</div>
+          <div class="color-usage">Main warm accent</div>
+        </div>
+      </div>
+      <div class="color-card">
+        <div class="color-swatch" style="background: #db8e84;"></div>
+        <div class="color-info">
+          <div class="color-name">warm-600</div>
+          <div class="color-hex">#db8e84</div>
+          <div class="color-usage">Light warm accent</div>
+        </div>
+      </div>
+      <div class="color-card">
+        <div class="color-swatch" style="background: #e2a69e;"></div>
+        <div class="color-info">
+          <div class="color-name">warm-500</div>
+          <div class="color-hex">#e2a69e</div>
+          <div class="color-usage">Softer warm accent</div>
+        </div>
+      </div>
+      <div class="color-card">
+        <div class="color-swatch" style="background: #e9beb8;"></div>
+        <div class="color-info">
+          <div class="color-name">warm-400</div>
+          <div class="color-hex">#e9beb8</div>
+          <div class="color-usage">Very light warm accent</div>
+        </div>
+      </div>
+      <div class="color-card">
+        <div class="color-swatch" style="background: #f0d6d2;"></div>
+        <div class="color-info">
+          <div class="color-name">warm-300</div>
+          <div class="color-hex">#f0d6d2</div>
+          <div class="color-usage">Warm tint</div>
+        </div>
+      </div>
+      <div class="color-card">
+        <div class="color-swatch" style="background: #f7eeec;"></div>
+        <div class="color-info">
+          <div class="color-name">warm-200</div>
+          <div class="color-hex">#f7eeec</div>
+          <div class="color-usage">Subtle warm background</div>
+        </div>
+      </div>
+      <div class="color-card">
+        <div class="color-swatch" style="background: #faf5f4;"></div>
+        <div class="color-info">
+          <div class="color-name">warm-100</div>
+          <div class="color-hex">#faf5f4</div>
+          <div class="color-usage">Minimal warm tint</div>
+        </div>
+      </div>
+      <div class="color-card">
+        <div class="color-swatch" style="background: #fdfcfc;"></div>
+        <div class="color-info">
+          <div class="color-name">warm-50</div>
+          <div class="color-hex">#fdfcfc</div>
+          <div class="color-usage">Almost white with warm</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Accent Teal -->
+    <h2>Accent Teal</h2>
+    <div class="section-intro">
+      <strong>Innovation, healthcare, trust.</strong>
+      <p>High-contrast accent for primary actions and highlights.</p>
+    </div>
+    <div class="color-grid">
+      <div class="color-card">
+        <div class="color-swatch" style="background: #1a645a;"></div>
+        <div class="color-info">
+          <div class="color-name">teal-900</div>
+          <div class="color-hex">#1a645a</div>
+          <div class="color-usage">Dark teal</div>
+        </div>
+      </div>
+      <div class="color-card">
+        <div class="color-swatch" style="background: #227b6f;"></div>
+        <div class="color-info">
+          <div class="color-name">teal-800</div>
+          <div class="color-hex">#227b6f</div>
+          <div class="color-usage">Hover state</div>
+        </div>
+      </div>
+      <div class="color-card">
+        <div class="color-swatch" style="background: #2a9d8f;"></div>
+        <div class="color-info">
+          <div class="color-name">teal-700 ⭐</div>
+          <div class="color-hex">#2a9d8f</div>
+          <div class="color-usage">Main teal accent</div>
+        </div>
+      </div>
+      <div class="color-card">
+        <div class="color-swatch" style="background: #4eaea2;"></div>
+        <div class="color-info">
+          <div class="color-name">teal-600</div>
+          <div class="color-hex">#4eaea2</div>
+          <div class="color-usage">Light teal accent</div>
+        </div>
+      </div>
+      <div class="color-card">
+        <div class="color-swatch" style="background: #72bfb5;"></div>
+        <div class="color-info">
+          <div class="color-name">teal-500</div>
+          <div class="color-hex">#72bfb5</div>
+          <div class="color-usage">Softer teal accent</div>
+        </div>
+      </div>
+      <div class="color-card">
+        <div class="color-swatch" style="background: #96cfc8;"></div>
+        <div class="color-info">
+          <div class="color-name">teal-400</div>
+          <div class="color-hex">#96cfc8</div>
+          <div class="color-usage">Very light teal accent</div>
+        </div>
+      </div>
+      <div class="color-card">
+        <div class="color-swatch" style="background: #bae0db;"></div>
+        <div class="color-info">
+          <div class="color-name">teal-300</div>
+          <div class="color-hex">#bae0db</div>
+          <div class="color-usage">Teal tint</div>
+        </div>
+      </div>
+      <div class="color-card">
+        <div class="color-swatch" style="background: #ddf0ed;"></div>
+        <div class="color-info">
+          <div class="color-name">teal-200</div>
+          <div class="color-hex">#ddf0ed</div>
+          <div class="color-usage">Subtle teal background</div>
+        </div>
+      </div>
+      <div class="color-card">
+        <div class="color-swatch" style="background: #eef7f6;"></div>
+        <div class="color-info">
+          <div class="color-name">teal-100</div>
+          <div class="color-hex">#eef7f6</div>
+          <div class="color-usage">Minimal teal tint</div>
+        </div>
+      </div>
+      <div class="color-card">
+        <div class="color-swatch" style="background: #f7fcfb;"></div>
+        <div class="color-info">
+          <div class="color-name">teal-50</div>
+          <div class="color-hex">#f7fcfb</div>
+          <div class="color-usage">Almost white with teal</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Accent Examples -->
+    <h2>Accent Colors in Action</h2>
+    <div class="accent-cards">
+      <div class="accent-card" style="background: linear-gradient(135deg, #2a9d8f, #227b6f);">
+        <h3>🔹 Teal Accent</h3>
+        <p>Used for primary actions, highlights, and interactive elements. Represents innovation, healthcare, and trust.</p>
+      </div>
+      <div class="accent-card" style="background: linear-gradient(135deg, #d4766a, #ba5e53);">
+        <h3>🔸 Warm Accent</h3>
+        <p>Used for secondary actions, emphasis, and call-to-action elements. Brings energy, warmth, and human touch.</p>
+      </div>
+    </div>
+
+    <!-- Color Psychology -->
+    <h2>Color Psychology</h2>
+    <div class="section-intro">
+      <ul style="list-style-position: inside; line-height: 2;">
+        <li><strong>Blue-Gray (Primary):</strong> Trust, professionalism, medical expertise</li>
+        <li><strong>Beige/Sage (Neutral):</strong> Warmth, comfort, approachability</li>
+        <li><strong>Teal (Accent 1):</strong> Innovation, healthcare, cleanliness</li>
+        <li><strong>Terracotta (Accent 2):</strong> Energy, warmth, human touch</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
