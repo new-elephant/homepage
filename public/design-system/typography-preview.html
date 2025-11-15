@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typography Preview - New Elephant Design System</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #e5dfd8 0%, #d4d7c4 100%);
+            padding: 3rem 2rem;
+            color: #687a86;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #3d4a52;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .subtitle {
+            text-align: center;
+            font-size: 1.25rem;
+            color: #687a86;
+            margin-bottom: 3rem;
+        }
+
+        .section {
+            background: white;
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px -1px rgba(104, 122, 134, 0.1), 0 2px 4px -1px rgba(104, 122, 134, 0.06);
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #2a9d8f;
+            margin-bottom: 2rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 3px solid #2a9d8f;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .preview-item {
+            padding: 1.5rem;
+            border: 2px solid #e5eaed;
+            border-radius: 8px;
+            background: #fafaf9;
+            transition: all 0.3s ease;
+        }
+
+        .preview-item:hover {
+            border-color: #2a9d8f;
+            box-shadow: 0 4px 12px rgba(42, 157, 143, 0.15);
+        }
+
+        .label {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: #2a9d8f;
+            margin-bottom: 0.5rem;
+            font-family: 'Courier New', monospace;
+        }
+
+        .value {
+            font-size: 0.875rem;
+            color: #8d9ca4;
+            margin-bottom: 1rem;
+            font-family: 'Courier New', monospace;
+        }
+
+        .sample {
+            color: #687a86;
+            word-break: break-word;
+        }
+
+        /* Font Size Samples */
+        .fs-xs { font-size: 0.75rem; }
+        .fs-sm { font-size: 0.875rem; }
+        .fs-base { font-size: 1rem; }
+        .fs-lg { font-size: 1.125rem; }
+        .fs-xl { font-size: 1.25rem; }
+        .fs-2xl { font-size: 1.5rem; }
+        .fs-3xl { font-size: 1.875rem; }
+        .fs-4xl { font-size: 2.25rem; }
+        .fs-5xl { font-size: 3rem; }
+        .fs-6xl { font-size: 4rem; }
+
+        /* Font Weight Samples */
+        .fw-normal { font-weight: 400; }
+        .fw-medium { font-weight: 500; }
+        .fw-semibold { font-weight: 600; }
+        .fw-bold { font-weight: 700; }
+        .fw-extrabold { font-weight: 800; }
+
+        /* Line Height Samples */
+        .lh-tight { line-height: 1.2; }
+        .lh-normal { line-height: 1.6; }
+        .lh-relaxed { line-height: 1.8; }
+        .lh-loose { line-height: 2; }
+
+        .line-height-demo {
+            background: #f2f5f6;
+            padding: 1rem;
+            border-radius: 4px;
+            border-left: 4px solid #2a9d8f;
+        }
+
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .fs-5xl { font-size: 2rem; }
+            .fs-6xl { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Typography Preview</h1>
+        <p class="subtitle">New Elephant Design System - Typography Tokens</p>
+
+        <!-- Font Sizes -->
+        <div class="section">
+            <h2 class="section-title">Font Sizes</h2>
+            <div class="grid">
+                <div class="preview-item">
+                    <div class="label">--font-size-xs</div>
+                    <div class="value">0.75rem (12px)</div>
+                    <div class="sample fs-xs">The quick brown fox jumps over the lazy dog</div>
+                </div>
+
+                <div class="preview-item">
+                    <div class="label">--font-size-sm</div>
+                    <div class="value">0.875rem (14px)</div>
+                    <div class="sample fs-sm">The quick brown fox jumps over the lazy dog</div>
+                </div>
+
+                <div class="preview-item">
+                    <div class="label">--font-size-base</div>
+                    <div class="value">1rem (16px)</div>
+                    <div class="sample fs-base">The quick brown fox jumps over the lazy dog</div>
+                </div>
+
+                <div class="preview-item">
+                    <div class="label">--font-size-lg</div>
+                    <div class="value">1.125rem (18px)</div>
+                    <div class="sample fs-lg">The quick brown fox jumps over the lazy dog</div>
+                </div>
+
+                <div class="preview-item">
+                    <div class="label">--font-size-xl</div>
+                    <div class="value">1.25rem (20px)</div>
+                    <div class="sample fs-xl">The quick brown fox jumps over the lazy dog</div>
+                </div>
+
+                <div class="preview-item">
+                    <div class="label">--font-size-2xl</div>
+                    <div class="value">1.5rem (24px)</div>
+                    <div class="sample fs-2xl">The quick brown fox jumps over the lazy dog</div>
+                </div>
+
+                <div class="preview-item">
+                    <div class="label">--font-size-3xl</div>
+                    <div class="value">1.875rem (30px)</div>
+                    <div class="sample fs-3xl">Medical Equipment Solutions</div>
+                </div>
+
+                <div class="preview-item">
+                    <div class="label">--font-size-4xl</div>
+                    <div class="value">2.25rem (36px)</div>
+                    <div class="sample fs-4xl">Medical Equipment</div>
+                </div>
+
+                <div class="preview-item">
+                    <div class="label">--font-size-5xl</div>
+                    <div class="value">3rem (48px)</div>
+                    <div class="sample fs-5xl">New Elephant</div>
+                </div>
+
+                <div class="preview-item">
+                    <div class="label">--font-size-6xl</div>
+                    <div class="value">4rem (64px)</div>
+                    <div class="sample fs-6xl">Hero</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Font Weights -->
+        <div class="section">
+            <h2 class="section-title">Font Weights</h2>
+            <div class="grid">
+                <div class="preview-item">
+                    <div class="label">--font-weight-normal</div>
+                    <div class="value">400</div>
+                    <div class="sample fw-normal fs-2xl">Regular - Body text and paragraphs</div>
+                </div>
+
+                <div class="preview-item">
+                    <div class="label">--font-weight-medium</div>
+                    <div class="value">500</div>
+                    <div class="sample fw-medium fs-2xl">Medium - Subtle emphasis</div>
+                </div>
+
+                <div class="preview-item">
+                    <div class="label">--font-weight-semibold</div>
+                    <div class="value">600</div>
+                    <div class="sample fw-semibold fs-2xl">Semibold - Subheadings</div>
+                </div>
+
+                <div class="preview-item">
+                    <div class="label">--font-weight-bold</div>
+                    <div class="value">700</div>
+                    <div class="sample fw-bold fs-2xl">Bold - Section headings</div>
+                </div>
+
+                <div class="preview-item">
+                    <div class="label">--font-weight-extrabold</div>
+                    <div class="value">800</div>
+                    <div class="sample fw-extrabold fs-2xl">Extrabold - Hero titles</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Line Heights -->
+        <div class="section">
+            <h2 class="section-title">Line Heights</h2>
+            <div class="grid">
+                <div class="preview-item">
+                    <div class="label">--line-height-tight</div>
+                    <div class="value">1.2</div>
+                    <div class="line-height-demo lh-tight fs-2xl">
+                        Perfect for large headings.<br>
+                        Keeps lines close together.<br>
+                        Creates visual impact.
+                    </div>
+                </div>
+
+                <div class="preview-item">
+                    <div class="label">--line-height-normal</div>
+                    <div class="value">1.6</div>
+                    <div class="line-height-demo lh-normal fs-lg">
+                        Ideal for body text and general content.<br>
+                        Provides good readability for paragraphs.<br>
+                        Balanced spacing between lines.<br>
+                        Most commonly used line height.
+                    </div>
+                </div>
+
+                <div class="preview-item">
+                    <div class="label">--line-height-relaxed</div>
+                    <div class="value">1.8</div>
+                    <div class="line-height-demo lh-relaxed fs-base">
+                        Great for longer form content.<br>
+                        Improves readability in dense text.<br>
+                        More breathing room between lines.<br>
+                        Easier on the eyes for extended reading.
+                    </div>
+                </div>
+
+                <div class="preview-item">
+                    <div class="label">--line-height-loose</div>
+                    <div class="value">2</div>
+                    <div class="line-height-demo lh-loose fs-base">
+                        Maximum spacing for special cases.<br>
+                        Used for very open, airy layouts.<br>
+                        Excellent for promotional content.<br>
+                        Creates a luxurious feel.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Typography Combinations -->
+        <div class="section">
+            <h2 class="section-title">Common Typography Patterns</h2>
+            <div class="grid">
+                <div class="preview-item">
+                    <div class="label">Hero Title</div>
+                    <div class="value">6xl / extrabold / tight</div>
+                    <div class="sample fs-6xl fw-extrabold lh-tight" style="color: #3d4a52;">New Elephant</div>
+                </div>
+
+                <div class="preview-item">
+                    <div class="label">Section Heading</div>
+                    <div class="value">5xl / bold / tight</div>
+                    <div class="sample fs-5xl fw-bold lh-tight" style="color: #687a86;">Our Products</div>
+                </div>
+
+                <div class="preview-item">
+                    <div class="label">Card Title</div>
+                    <div class="value">3xl / semibold / normal</div>
+                    <div class="sample fs-3xl fw-semibold lh-normal">Medical Equipment</div>
+                </div>
+
+                <div class="preview-item">
+                    <div class="label">Body Text</div>
+                    <div class="value">lg / normal / relaxed</div>
+                    <div class="sample fs-lg fw-normal lh-relaxed">
+                        New Elephant provides innovative medical equipment solutions and healthcare technology.
+                        Trusted partner for hospitals and medical facilities worldwide.
+                    </div>
+                </div>
+
+                <div class="preview-item">
+                    <div class="label">Caption / Small Text</div>
+                    <div class="value">sm / medium / normal</div>
+                    <div class="sample fs-sm fw-medium lh-normal" style="color: #8d9ca4;">
+                        © 2024 New Elephant. All rights reserved.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
