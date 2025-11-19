@@ -16,7 +16,8 @@
   "products": {
     "title": "產品與解決方案",
     "categories": {
-      "vascularIntervention": "血管介入產品"
+      "vascularIntervention": "血管介入產品",
+      "neurologicalIntervention": "神經介入產品"
     },
     "product1": {
       "title": "PTFE Guidewire",
@@ -24,6 +25,26 @@
     },
     "product2": {
       "title": "Hydrophilic Guidewire",
+      "description": ""
+    },
+    "product3": {
+      "title": "Y-connector Pack",
+      "description": ""
+    },
+    "product4": {
+      "title": "Guiding Catheter",
+      "description": ""
+    },
+    "product5": {
+      "title": "Angiography Catheter",
+      "description": ""
+    },
+    "product6": {
+      "title": "Micro Catheter",
+      "description": ""
+    },
+    "product7": {
+      "title": "Micro Guidewire",
       "description": ""
     }
   },

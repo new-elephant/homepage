@@ -6,6 +6,11 @@ import { languages, useTranslations, type Language } from '../../i18n/utils';
 import logo from '../../assets/new-elephant.svg';
 import ptfeGuidewire from '../../assets/products/ptfe-guidewire.png';
 import hydrophilicGuidewire from '../../assets/products/hydrophilic-guidewire.png';
+import yConnectorPack from '../../assets/products/y-connector-pack.png';
+import guidingCatheter from '../../assets/products/guiding-catheter.png';
+import angiographyCatheter from '../../assets/products/angiography-catheter.png';
+import microCatheter from '../../assets/products/micro-catheter.png';
+import microGuidewire from '../../assets/products/micro-guidewire.png';
 
 export function getStaticPaths() {
   return Object.keys(languages).map((lang) => ({
@@ -55,6 +60,37 @@ const t = useTranslations(lang as Language);
 						<img src={hydrophilicGuidewire.src} alt="Hydrophilic Guidewire" class="product-image" />
 						<h3>{t('products.product2.title')}</h3>
 						 <p>{t('products.product2.description')}</p>
+					</div>
+					<div class="product-card">
+						<img src={yConnectorPack.src} alt="Y-connector Pack" class="product-image" />
+						<h3>{t('products.product3.title')}</h3>
+						 <p>{t('products.product3.description')}</p>
+					</div>
+					<div class="product-card">
+						<img src={guidingCatheter.src} alt="Guiding Catheter" class="product-image" />
+						<h3>{t('products.product4.title')}</h3>
+						 <p>{t('products.product4.description')}</p>
+					</div>
+					<div class="product-card">
+						<img src={angiographyCatheter.src} alt="Angiography Catheter" class="product-image" />
+						<h3>{t('products.product5.title')}</h3>
+						 <p>{t('products.product5.description')}</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="product-category">
+				<h3 class="category-title">{t('products.categories.neurologicalIntervention')}</h3>
+				<div class="products-grid">
+					<div class="product-card">
+						<img src={microCatheter.src} alt="Micro Catheter" class="product-image" />
+						<h3>{t('products.product6.title')}</h3>
+						 <p>{t('products.product6.description')}</p>
+					</div>
+					<div class="product-card">
+						<img src={microGuidewire.src} alt="Micro Guidewire" class="product-image" />
+						<h3>{t('products.product7.title')}</h3>
+						 <p>{t('products.product7.description')}</p>
 					</div>
 				</div>
 			</div>

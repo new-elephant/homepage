@@ -16,7 +16,8 @@
   "products": {
     "title": "Products & Solutions",
     "categories": {
-      "vascularIntervention": "Vascular Intervention Products"
+      "vascularIntervention": "Vascular Intervention Products",
+      "neurologicalIntervention": "Neurological Intervention Products"
     },
     "product1": {
       "title": "PTFE Guidewire",
@@ -24,6 +25,26 @@
     },
     "product2": {
       "title": "Hydrophilic Guidewire",
+      "description": ""
+    },
+    "product3": {
+      "title": "Y-connector Pack",
+      "description": ""
+    },
+    "product4": {
+      "title": "Guiding Catheter",
+      "description": ""
+    },
+    "product5": {
+      "title": "Angiography Catheter",
+      "description": ""
+    },
+    "product6": {
+      "title": "Micro Catheter",
+      "description": ""
+    },
+    "product7": {
+      "title": "Micro Guidewire",
       "description": ""
     }
   },
