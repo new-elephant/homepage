@@ -15,17 +15,16 @@
   },
   "products": {
     "title": "產品與解決方案",
+    "categories": {
+      "vascularIntervention": "血管介入產品"
+    },
     "product1": {
-      "title": "醫影寶專業系列",
-      "description": "來自全球領先製造商的先進診斷影像系統，包括超音波、X光及電腦斷層掃描儀，提供準確可靠的診斷能力。"
+      "title": "PTFE Guidewire",
+      "description": ""
     },
     "product2": {
-      "title": "手術護理精英系統",
-      "description": "全面的手術器械與病患監測設備，專為提升手術精準度及手術室與重症照護單位的病患安全而設計。"
-    },
-    "product3": {
-      "title": "檢驗科技分析套組",
-      "description": "最先進的實驗室分析儀、臨床檢測設備及診斷儀器，提供準確高效的醫學檢驗與分析。"
+      "title": "Hydrophilic Guidewire",
+      "description": ""
     }
   },
   "contact": {

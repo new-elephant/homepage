@@ -4,6 +4,8 @@ import LanguageSwitcher from '../../components/LanguageSwitcher.astro';
 import '../../styles/index.css';
 import { languages, useTranslations, type Language } from '../../i18n/utils';
 import logo from '../../assets/new-elephant.svg';
+import ptfeGuidewire from '../../assets/products/ptfe-guidewire.png';
+import hydrophilicGuidewire from '../../assets/products/hydrophilic-guidewire.png';
 
 export function getStaticPaths() {
   return Object.keys(languages).map((lang) => ({
@@ -40,18 +42,20 @@ const t = useTranslations(lang as Language);
 	<section id="products">
 		<div class="container">
 			<h2>{t('products.title')}</h2>
-			<div class="products-grid">
-				<div class="product-card">
-					<h3>{t('products.product1.title')}</h3>
-					<p>{t('products.product1.description')}</p>
-				</div>
-				<div class="product-card">
-					<h3>{t('products.product2.title')}</h3>
-					<p>{t('products.product2.description')}</p>
-				</div>
-				<div class="product-card">
-					<h3>{t('products.product3.title')}</h3>
-					<p>{t('products.product3.description')}</p>
+
+			<div class="product-category">
+				<h3 class="category-title">{t('products.categories.vascularIntervention')}</h3>
+				<div class="products-grid">
+					<div class="product-card">
+						<img src={ptfeGuidewire.src} alt="PTFE Guidewire" class="product-image" />
+						<h3>{t('products.product1.title')}</h3>
+						 <p>{t('products.product1.description')}</p>
+					</div>
+					<div class="product-card">
+						<img src={hydrophilicGuidewire.src} alt="Hydrophilic Guidewire" class="product-image" />
+						<h3>{t('products.product2.title')}</h3>
+						 <p>{t('products.product2.description')}</p>
+					</div>
 				</div>
 			</div>
 		</div>

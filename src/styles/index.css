@@ -342,11 +342,28 @@ section {
 	border-radius: var(--radius-sm);
 }
 
+.product-category {
+	margin-top: var(--space-3xl);
+}
+
+.category-title {
+	font-size: var(--font-size-3xl);
+	font-weight: var(--font-weight-bold);
+	color: var(--color-primary-900);
+	margin-bottom: var(--space-xl);
+	padding: var(--space-md) var(--space-xl);
+	background: linear-gradient(135deg, var(--color-accent-teal-100) 0%, var(--color-accent-teal-50) 100%);
+	border-left: 5px solid var(--color-accent-teal-700);
+	border-radius: var(--radius-md);
+	display: inline-block;
+	box-shadow: var(--shadow-sm);
+}
+
 .products-grid {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 	gap: 2.5rem;
-	margin-top: var(--space-2xl);
+	margin-top: var(--space-lg);
 }
 
 .product-card {
@@ -415,6 +432,17 @@ section {
 	font-size: var(--font-size-lg);
 	position: relative;
 	z-index: 1;
+}
+
+.product-card .product-image {
+	width: 100%;
+	height: auto;
+	max-height: 250px;
+	object-fit: contain;
+	margin-bottom: var(--space-lg);
+	border-radius: var(--radius-md);
+	background: white;
+	padding: var(--space-md);
 }
 
 /* Contact Section */

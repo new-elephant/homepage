@@ -1,5 +1,5 @@
 ---
-import { languages, type Language } from '../i18n/utils';
+import { languages, type Language } from "../i18n/utils";
 
 interface Props {
   currentLang: Language;
@@ -9,15 +9,17 @@ const { currentLang } = Astro.props;
 ---
 
 <div class="language-switcher">
-  {Object.entries(languages).map(([lang, label]) => (
-    <a
-      href={`/${lang}`}
-      class:list={['lang-link', { active: lang === currentLang }]}
-      aria-label={`Switch to ${label}`}
-    >
-      {label}
-    </a>
-  ))}
+  {
+    Object.entries(languages).map(([lang, label]) => (
+      <a
+        href={`/${lang}/`}
+        class:list={["lang-link", { active: lang === currentLang }]}
+        aria-label={`Switch to ${label}`}
+      >
+        {label}
+      </a>
+    ))
+  }
 </div>
 
 <style>
@@ -31,7 +33,9 @@ const { currentLang } = Astro.props;
     backdrop-filter: blur(10px);
     padding: 0.75rem 1rem;
     border-radius: 50px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    box-shadow:
+      0 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0 2px 4px -1px rgba(0, 0, 0, 0.06);
     border: 1px solid rgba(141, 156, 164, 0.3);
     z-index: 1000;
   }

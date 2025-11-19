@@ -15,17 +15,16 @@
   },
   "products": {
     "title": "Products & Solutions",
+    "categories": {
+      "vascularIntervention": "Vascular Intervention Products"
+    },
     "product1": {
-      "title": "MediScan Pro Series",
-      "description": "Advanced diagnostic imaging systems including ultrasound, X-ray, and CT scanners from leading global manufacturers, providing accurate and reliable diagnostic capabilities."
+      "title": "PTFE Guidewire",
+      "description": ""
     },
     "product2": {
-      "title": "SurgiCare Elite System",
-      "description": "Comprehensive range of surgical instruments and patient monitoring equipment designed to enhance surgical precision and patient safety in operating rooms and critical care units."
-    },
-    "product3": {
-      "title": "LabTech Analyzer Suite",
-      "description": "State-of-the-art laboratory analyzers, clinical testing equipment, and diagnostic instruments for accurate and efficient medical testing and analysis."
+      "title": "Hydrophilic Guidewire",
+      "description": ""
     }
   },
   "contact": {
