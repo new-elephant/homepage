@@ -400,11 +400,11 @@ section {
 	border-color: var(--color-accent-teal);
 }
 
-.product-card:nth-child(2)::before {
+.product-card:nth-child(2n)::before {
 	background: var(--color-accent-warm);
 }
 
-.product-card:nth-child(2):hover {
+.product-card:nth-child(2n):hover {
 	border-color: var(--color-accent-warm);
 }
 
@@ -422,7 +422,7 @@ section {
 	color: var(--color-accent-teal);
 }
 
-.product-card:nth-child(2):hover h3 {
+.product-card:nth-child(2n):hover h3 {
 	color: var(--color-accent-warm);
 }
 

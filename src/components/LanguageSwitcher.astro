@@ -1,5 +1,6 @@
 ---
 import { languages, type Language } from "../i18n/utils";
+import "../styles/language-switcher.css";
 
 interface Props {
   currentLang: Language;
@@ -21,56 +22,3 @@ const { currentLang } = Astro.props;
     ))
   }
 </div>
-
-<style>
-  .language-switcher {
-    position: fixed;
-    top: 2rem;
-    right: 2rem;
-    display: flex;
-    gap: 0.5rem;
-    background: rgba(229, 223, 216, 0.95);
-    backdrop-filter: blur(10px);
-    padding: 0.75rem 1rem;
-    border-radius: 50px;
-    box-shadow:
-      0 4px 6px -1px rgba(0, 0, 0, 0.1),
-      0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    border: 1px solid rgba(141, 156, 164, 0.3);
-    z-index: 1000;
-  }
-
-  .lang-link {
-    padding: 0.5rem 1rem;
-    text-decoration: none;
-    color: #687a86;
-    font-weight: 500;
-    border-radius: 50px;
-    transition: all 0.2s ease;
-    font-size: 0.875rem;
-  }
-
-  .lang-link:hover {
-    background: rgba(212, 215, 196, 0.6);
-    color: #687a86;
-  }
-
-  .lang-link.active {
-    background: #2a9d8f;
-    color: white;
-    box-shadow: 0 2px 8px rgba(42, 157, 143, 0.3);
-  }
-
-  @media (max-width: 768px) {
-    .language-switcher {
-      top: 1rem;
-      right: 1rem;
-      padding: 0.5rem 0.75rem;
-    }
-
-    .lang-link {
-      padding: 0.375rem 0.75rem;
-      font-size: 0.8125rem;
-    }
-  }
-</style>
