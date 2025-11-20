@@ -17,7 +17,8 @@
     "title": "產品與解決方案",
     "categories": {
       "vascularIntervention": "血管介入產品",
-      "neurologicalIntervention": "神經介入產品"
+      "neurologicalIntervention": "神經介入產品",
+      "medicalEnergyStorage": "醫療用儲能系統"
     },
     "product1": {
       "title": "PTFE Guidewire",
@@ -45,6 +46,10 @@
     },
     "product7": {
       "title": "Micro Guidewire",
+      "description": ""
+    },
+    "product8": {
+      "title": "Multi-Functional Energy Storage System",
       "description": ""
     }
   },

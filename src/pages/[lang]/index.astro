@@ -11,6 +11,7 @@ import guidingCatheter from '../../assets/products/guiding-catheter.png';
 import angiographyCatheter from '../../assets/products/angiography-catheter.png';
 import microCatheter from '../../assets/products/micro-catheter.png';
 import microGuidewire from '../../assets/products/micro-guidewire.png';
+import energyStorage from '../../assets/products/LF4S2P50L.png';
 
 export function getStaticPaths() {
   return Object.keys(languages).map((lang) => ({
@@ -105,6 +106,19 @@ const t = useTranslations(lang as Language);
 						</div>
 						<h3>{t('products.product7.title')}</h3>
 						 <p>{t('products.product7.description')}</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="product-category">
+				<h3 class="category-title">{t('products.categories.medicalEnergyStorage')}</h3>
+				<div class="products-grid">
+					<div class="product-card">
+						<div class="product-image-container">
+							<img src={energyStorage.src} alt="MULTI-FUNCTIONAL ENERGY STORAGE SYSTEM" class="product-image" />
+						</div>
+						<h3>{t('products.product8.title')}</h3>
+						 <p>{t('products.product8.description')}</p>
 					</div>
 				</div>
 			</div>

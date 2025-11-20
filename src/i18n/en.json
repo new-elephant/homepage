@@ -17,7 +17,8 @@
     "title": "Products & Solutions",
     "categories": {
       "vascularIntervention": "Vascular Intervention Products",
-      "neurologicalIntervention": "Neurological Intervention Products"
+      "neurologicalIntervention": "Neurological Intervention Products",
+      "medicalEnergyStorage": "Medical Energy Storage System"
     },
     "product1": {
       "title": "PTFE Guidewire",
@@ -45,6 +46,10 @@
     },
     "product7": {
       "title": "Micro Guidewire",
+      "description": ""
+    },
+    "product8": {
+      "title": "Multi-Functional Energy Storage System",
       "description": ""
     }
   },
